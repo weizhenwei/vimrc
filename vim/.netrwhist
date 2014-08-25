@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/wzw/softwares/firefox/ff-24/mozilla-release/js/src'
+let g:netrw_dirhist_2='/home/wzw/softwares/firefox/ff-24/mozilla-release/js/src/jit'
+let g:netrw_dirhist_3='/home/wzw/softwares/firefox/ff-24/mozilla-release/js/src'
+let g:netrw_dirhist_4='/home/wzw/softwares/firefox/ff-24/mozilla-release/js/src/jit'
+let g:netrw_dirhist_5='/home/wzw/softwares/firefox/ff-24/mozilla-release/js/src'
+let g:netrw_dirhist_6='/home/wzw/softwares/firefox/ff-24/mozilla-release/js/src/jit'

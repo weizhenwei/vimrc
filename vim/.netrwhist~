@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/wzw/study/algorithm/quicktest/quicksort'
+let g:netrw_dirhist_2='/home/wzw/study/hadoop/hadoop-0.20.203.0/ivy'
+let g:netrw_dirhist_3='/home/wzw/study/linuxkernelsourcecode/linux-2.6.23/Documentation/netlabel'
+let g:netrw_dirhist_4='/home/wzw/study/linuxkernelsourcecode/linux-2.6.23/Documentation/networking'
+let g:netrw_dirhist_5='/home/wzw/study/linuxkernelsourcecode/linux-2.6.23/init'
