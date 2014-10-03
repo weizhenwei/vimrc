@@ -26,6 +26,9 @@ set hlsearch
 " set column warning line to 80
 set cc=80
 
+"choose whether to display the $ at end of each line
+"set list
+
 " backup file is annoying, don't keep it
 set nobackup
 
