@@ -9,8 +9,8 @@
 "  for MS-DOS and Win32:  $VIM\_vimrc
 "	    for OpenVMS:  sys$login:.vimrc
 
-source ~/.vim/lex.vim
-source ~/.vim/yacc.vim
+" source ~/.vim/lex.vim
+" source ~/.vim/yacc.vim
 
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -52,10 +52,10 @@ set autoindent		" always set autoindenting on
 set cindent		    " always set cindenting on
 
 
-let Tlist_Ctags_Cmd = '/usr/bin/ctags'  "设定linux系统中ctags程序的位置
-let Tlist_Exit_OnlyWindow = 1           "如果taglist窗口是最后一个窗口，退出vim
-let Tlist_File_Fold_Auto_Close = 1      "当前不被编辑的文件方法列表自动折叠
-let Tlist_Show_Menu = 1                 "显示taglist菜单
+" let Tlist_Ctags_Cmd = '/usr/bin/ctags'  "设定linux系统中ctags程序的位置
+" let Tlist_Exit_OnlyWindow = 1           "如果taglist窗口是最后一个窗口，退出vim
+" let Tlist_File_Fold_Auto_Close = 1      "当前不被编辑的文件方法列表自动折叠
+" let Tlist_Show_Menu = 1                 "显示taglist菜单
 "let Tlist_WinWidth = 40                 "taglist的宽度
 "let Tlist_WinHeight = 40                "taglist的高度
 "let Tlist_Auto_Open = 1                "启动vim时打开taglist
@@ -262,4 +262,66 @@ if has("cscope")
     "set ttimeoutlen=100
 
 endif
+ 
+
+" Vundle Plugin settings
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" YouCompleteMe Plugin
+Bundle 'Valloric/YouCompleteMe'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+" Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+" Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Avoid a name conflict with L9
+" Plugin 'user/L9', {'name': 'newL9'}
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to
+" auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+" for ycm config
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_error_symbol = 'E'
+let g:ycm_warning_symol = 'W'
+let g:ycm_complete_in_comments = 1
+let g:ycm_min_num_of_chars_for_completion = 2
+let g:ycm_confirm_extra_conf = 0  " auto load extra config file;
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nmap <F4> :YcmDiags<CR>
 
