@@ -280,6 +280,9 @@ Plugin 'VundleVim/Vundle.vim'
 " YouCompleteMe Plugin
 Bundle 'Valloric/YouCompleteMe'
 
+" rdnetto/YCM-Generator, config file for each project
+Plugin 'rdnetto/YCM-Generator'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
